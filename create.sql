@@ -26,6 +26,3 @@ create table [Adresses]
 	, [State] nvarchar(15) not null
 	, Country nvarchar(14) constraint country_cc check (Country in ('United States', 'Canada'))
 )
-
-drop table [Adresses]
-drop table [Customers]
