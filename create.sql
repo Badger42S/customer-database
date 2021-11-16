@@ -1,4 +1,7 @@
+use [master]
 create database [Customer Database]
+go
+use [Customer Database]
 create table [Customers]
 (
 	CustomerId int identity(1,1) not null constraint [Customer_Id] primary key clustered
