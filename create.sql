@@ -1,7 +1,7 @@
 use [master]
-create database [Customer Database]
+create database [CustomerLib_Semenkov]
 go
-use [Customer Database]
+use [CustomerLib_Semenkov]
 create table [Customers]
 (
 	CustomerId int identity(1,1) not null constraint [Customer_Id] primary key clustered
