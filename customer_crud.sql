@@ -1,4 +1,4 @@
-use [Customer Database]
+use [CustomerLib_Semenkov]
 go
 SET ANSI_NULLS ON
 GO

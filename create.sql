@@ -16,7 +16,7 @@ create table [Customers]
 )
 create table [Addresses]
 (
-	AdressId int identity(1,1) not null constraint [Adress_Id] primary key clustered
+	AddressId int identity(1,1) not null constraint [Address_Id] primary key clustered
 	, CustomerId int not null foreign key references Customers(CustomerId)
 	, [Address Line] nvarchar(100) not null
 	, [Address Line2 ] nvarchar(100) 

@@ -1,10 +1,10 @@
-use [Customer Database]
+use [CustomerLib_Semenkov]
 go
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE PROCEDURE AdressCreate
+CREATE PROCEDURE AddressCreate
 	@CustomerId int
 	, @Address_Line nvarchar (100)
 	, @Address_Line2 nvarchar (100) = null
@@ -21,8 +21,8 @@ BEGIN
 END
 
 GO
-CREATE PROCEDURE AdressUpdate
-	@AdressId int
+CREATE PROCEDURE AddressUpdate
+	@AddressId int
 	, @CustomerId int
 	, @Address_Line nvarchar (100)
 	, @Address_Line2 nvarchar (100) = null
@@ -37,26 +37,26 @@ BEGIN
 	update [Addresses] 
 	set CustomerId = @CustomerId, [Address Line] = @Address_Line, [Address Line2 ] = @Address_Line2, [Address Type] = @Address_Type, 
 		City = @City, [Postal Code] = @Postal_Code, [State] = @State, [Country] = @Country
-	where AdressId = @AdressId
+	where AddressId = @AddressId
 END
 
 GO
-CREATE PROCEDURE AdressRead
-	@AdressId int
+CREATE PROCEDURE AddressRead
+	@AddressesId int
 AS
 BEGIN
 	SET NOCOUNT ON;
 	Select * from [Addresses] 
-	where AdressId = @AdressId
+	where AddressesId = @AddressesId
 END
 
 GO
-CREATE PROCEDURE AdressDelete
-	@AdressId int
+CREATE PROCEDURE AddressDelete
+	@AddressesId int
 AS
 BEGIN
 	SET NOCOUNT ON;
 	Delete from [Addresses]
-	where AdressId = @AdressId
+	where AddressesId = @AddressesId
 END
 GO
