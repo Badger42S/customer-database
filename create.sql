@@ -14,7 +14,7 @@ create table [Customers]
 	, constraint phone_number_cc check ([Phone Number] like '+[1-9]'+ REPLICATE('[0-9]', 13))
 	, constraint email_cc check (Email like '%[A-Z0-9][@][A-Z0-9]%[.][A-Z0-9]%')
 )
-create table [Adresses]
+create table [Addresses]
 (
 	AdressId int identity(1,1) not null constraint [Adress_Id] primary key clustered
 	, CustomerId int not null foreign key references Customers(CustomerId)

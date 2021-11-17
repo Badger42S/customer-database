@@ -16,7 +16,7 @@ CREATE PROCEDURE AdressCreate
 AS
 BEGIN
 	SET NOCOUNT ON;
-	insert into [Adresses] (CustomerId, [Address Line], [Address Line2 ], [Address Type], City, [Postal Code], [State], [Country])
+	insert into [Addresses] (CustomerId, [Address Line], [Address Line2 ], [Address Type], City, [Postal Code], [State], [Country])
 	values (@CustomerId, @Address_Line, @Address_Line2, @Address_Type, @City, @Postal_Code, @State, @Country)
 END
 
@@ -34,7 +34,7 @@ CREATE PROCEDURE AdressUpdate
 AS
 BEGIN
 	SET NOCOUNT ON;
-	update [Adresses] 
+	update [Addresses] 
 	set CustomerId = @CustomerId, [Address Line] = @Address_Line, [Address Line2 ] = @Address_Line2, [Address Type] = @Address_Type, 
 		City = @City, [Postal Code] = @Postal_Code, [State] = @State, [Country] = @Country
 	where AdressId = @AdressId
@@ -46,7 +46,7 @@ CREATE PROCEDURE AdressRead
 AS
 BEGIN
 	SET NOCOUNT ON;
-	Select * from [Adresses] 
+	Select * from [Addresses] 
 	where AdressId = @AdressId
 END
 
@@ -56,7 +56,7 @@ CREATE PROCEDURE AdressDelete
 AS
 BEGIN
 	SET NOCOUNT ON;
-	Delete from [Adresses]
+	Delete from [Addresses]
 	where AdressId = @AdressId
 END
 GO
