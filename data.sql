@@ -1,3 +1,5 @@
+use [CustomerLib_Semenkov]
+go
 /*correct data*/
 insert into [Customers] ([First Name], [Last Name], [Phone Number], Email, Notes, [Total Purchases Amount])
 values ('Fedor', 'Popov', '+10000000000009', 'sdf@gmsil.cow', 'Some text', 55);
