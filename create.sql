@@ -5,11 +5,11 @@ use [Customer Database]
 create table [Customers]
 (
 	CustomerId int identity(1,1) not null constraint [Customer_Id] primary key clustered
-	, [First Name] nvarchar(50)
 	, [Last Name] nvarchar(50) not null
+	, [First Name] nvarchar(50)
 	, [Phone Number] nvarchar(15) 
 	, Email nvarchar(40) 
-	, Notes ntext not null
+	, Notes nvarchar(max) not null
 	, [Total Purchases Amount] money
 	, constraint phone_number_cc check ([Phone Number] like '+[1-9]'+ REPLICATE('[0-9]', 13))
 	, constraint email_cc check (Email like '%[A-Z0-9][@][A-Z0-9]%[.][A-Z0-9]%')
